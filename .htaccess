@@ -1,0 +1,46 @@
+#-----------------------------------------------------------------
+#RewriteEngine On
+#RewriteCond %{REQUEST_URI} !^/public/
+#RewriteRule ^(.*)$ /public/$1 [L,QSA]
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(css|js|images)/(.*)$ public/$1/$2 [L,NC]
+
+
+#
+# RewriteEngine On
+#
+# RewriteCond %{REQUEST_URI} !^/public/
+# RewriteRule ^(.*)$ /public/$1 [L,R=301]
+#
+# <IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteRule ^(.*)$ public/$1 [L]
+# </IfModule>
+
+#
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^audimaf.com$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^www.audimaf.com$
+#RewriteCond %{REQUEST_URI} !public/
+#RewriteRule (.*) /public/$1 [L]
+
+#RewriteEngine On
+#RewriteBase /
+#
+#RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+#RewriteRule ^ %1 [L,NE,R=302]
+#
+#RewriteRule ^((?!public/).*)$ public/$1 [L,NC]

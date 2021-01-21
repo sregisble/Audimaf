@@ -1,0 +1,139 @@
+<header id="header-id" class="main-header third_header">
+    <div class="header-top clearfix">
+        <div class="header_contact clearfix ul-li">
+            <ul>
+                <li><i class="far fa-envelope"></i> <span>contact@audimaf.com</span></li>
+                <li><i class="fas fa-phone"></i> <span>+225 05-05-50-03-54</span></li>
+                <li><i class="fas fa-map-marker-alt"></i> <span>Abidjan, Plateau</span></li>
+            </ul>
+        </div>
+        <div class="header-top_right float-right">
+            <div class="header_social  ul-li">
+                <!-- <div class="lang-select relative-position float-left">
+                    <select>
+                        <option value="9" selected="">ENG</option>
+                        <option value="10">BAN</option>
+                        <option value="11">ARB</option>
+                        <option value="12">SPN</option>
+                    </select>
+                </div> -->
+                <div class="header_social float-right ul-li">
+                    <ul>
+                        <li class="h-fb"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="h-tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="h-bh"><a href="#"><i class="fab fa-behance"></i></a></li>
+                        <li class="h-lk"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="h-yo"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-menu-header clearfix relative-position">
+        <div class="brand-logo float-left ">
+            <a href="#"><img id="logo" src="/assets/img/logo/logo1.png" alt="logo"></a>
+        </div>
+        <div class="q-btn_1 float-right text-center">
+            <a class="block-display " href="{{ path("contact") }}"> Nous joindre</a>
+        </div>
+        <nav class="main-navigation float-right nav-menu-1 clearfix ul-li">
+            <ul id="main-nav" class="nav navbar-nav clearfix">
+
+                <li><a href="{{ path("homepage") }}">Accueil</a></li>
+                <li><a href="{{ path("presentation") }}">Presentation</a></li>
+                <li><a href="{{ path("presentation") }}">Services</a></li>
+                {#<li class="menu-item-has-child">
+                    <a href="#">Services</a>
+                    <ul class="sub-menu clearfix">
+                        <li><a href="team.html">Team Page</a></li>
+                        <li><a href="mission.html">Mission Page</a></li>
+                        <li><a href="career.html">Career Page </a></li>
+                        <li><a href="faq.html">FAQ Page</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="404.html">404 Page</a></li>
+                    </ul>
+                </li>#}
+
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile_menu">
+        <div class="mobile_menu_wrap">
+            <i class="open_bar menu_trigger  fas fa-list-ul"></i>
+            <div  class="wide_sidebar">
+                <div class="side_bar_overlay open_bar"></div>
+                <div class="wide_sidebar_content pera-content headline">
+                    <div class="w-brand-logo">
+                        <a href="%21.html#"><img v-lazy="'assets/img/logo/logo2.png'" alt="logo"></a>
+                    </div>
+                    <!-- <div class="mobile_search-bar relative-position">
+                        <div class="form-item">
+                            <form action="#">
+                                <input type="search" placeholder="Search...">
+                                <button type="submit" class="form-item-btn"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                    <div class="pages-list">
+                        <ul class="list-unstyled components">
+                            <li>
+                                <router-link to="/home">
+                                    <a href="#">
+                                        <span class="menu_icon text-center"><i class="fas fa-user"></i></span>
+                                        Accueil
+                                    </a>
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link to="/home">
+                                    <a href="#">
+                                        <span class="menu_icon text-center"><i class="fas fa-user"></i></span>
+                                        Presentation
+                                    </a>
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link to="/services">
+                                    <a href="#">
+                                        <span class="menu_icon text-center"><i class="fas fa-user"></i></span>
+                                        Services
+                                    </a>
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link to="/contact">
+                                    <a href="#">
+                                        <span class="menu_icon text-center"><i class="fas fa-user"></i></span>
+                                        Contact
+                                    </a>
+                                </router-link>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="page_headline">Contacts :</p>
+                    <div class="mobile_menu_contact ul-li-block">
+                        <ul>
+                            <li><i class="far fa-envelope"></i> <span>info@audimaf.com</span></li>
+                            <li><i class="fas fa-phone"></i> <span>+225 05-05-50-03-54</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span>Abidjan, Plateau</span></li>
+                        </ul>
+                    </div>
+                    <p class="page_headline">Suivez nous sur:</p>
+                    <div class="mobile_menu_follow clearfix ul-li">
+                        <ul>
+                            <li class="h-fb"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="h-tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="h-bh"><a href="#"><i class="fab fa-behance"></i></a></li>
+                            <li class="h-lk"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="h-yo"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="side_copyright">Copyright By@ Devs -2021</div>
+                    <div class="wide_sidebar_collapse open_bar">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

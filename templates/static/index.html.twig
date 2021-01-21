@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .service-list{cursor: pointer;}
+    </style>
+{% endblock %}
+
+{% block body %}
+    <section id="slider" class="slider-section home_slide3">
+        <div id="slide_wrapper" class="slide-area-content">
+            <div class="slider-layer ">
+                <div class="slider-img img-zooming" style="background-image: url('/assets/img/s1.jpg');"></div>
+                <div class="container">
+                    <div class="slider-text">
+                        <div class="slider_text-box slider_wrap1 text-center headline pera-content">
+                            <div class="content-area">
+                                <p>Expertise Compatable, Audit &amp; Conseils</p>
+                                <h1>L'information financière
+                                    fiable
+                                </h1>
+                                <div class="slide_btn clearfix text-center ul-li">
+                                    <ul>
+                                        <!-- <li class="hover-btn"><a class="block-display" href="#">Get A Quote</a></li> -->
+                                        <li class="hover-btn"><a class="block-display" href="#">En savoir plus</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="talk_text">
+                                <a href="#">
+                                    <span>Chat Box</span>
+                                    <div class="talk_icon">
+                                        <i class="far fa-comments"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-layer ">
+                <div class="slider-img img-zooming" style="background-image: url('/assets/img/s2.jpg');"></div>
+                <div class="container">
+                    <div class="slider-text">
+                        <div class="slider_text-box slider_wrap1 text-center headline pera-content">
+                            <div class="content-area">
+                                <p>Juridique et fiscal</p>
+                                <h1>Aide à la prise de décision</h1>
+                                <div class="slide_btn clearfix text-center ul-li">
+                                    <ul>
+                                        <li class="hover-btn"><a class="block-display" href="#">En savoir plus</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="talk_text">
+                                <a href="#">
+                                    <span>Chat Box</span>
+                                    <div class="talk_icon">
+                                        <i class="far fa-comments"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feature" class="feature-section background-style relative-position">
+        <div class="background-overlay"></div>
+        <div class="feature-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-content-area clearfix text-center ul-li">
+                            <ul>
+                                {% for service in services %}
+                                <li class="service-list feature-icon-text pera-content" onclick="window.location='/services/{{ service.slug }}'">
+                                    <span class="{{ service.icon }}"></span>
+                                    <p>{{ service.name }}</p>
+                                    <div class="feature-hover">
+                                        <span class="{{ service.icon }}"></span>
+                                        <p>{{ service.name }}</p>
+                                        <div class="icon-bg"><span class="{{ service.icon }}"></span></div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="award-area">
+                            <div class="award-text">
+                                <div class="section-title-area section-left-title">
+                                    <div class="section-title headline relative-position">
+                                        <div class="title-head pera-content">
+                                            <h2>Nos Activités</h2>
+                                            <p>25 years of experience</p>
+                                            <span>
+                                                Audit ou conseils en gestion comptabilité management et finances. Audimaf est un cabinet d'expertise comptable et de commissariat aux comptes inscrit au tableau de l'ordre des experts comptables de côte d'Ivoire. Les métier classiques que sont la comptabilité et le commissariat aux comptes sont exercés de...
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /text -->
+                                <div class="feature_img">
+                                    <img src="assets/img/feature/fr1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="get-quote" class="quote-section2">
+        <div class="container">
+            <div class="quote_content">
+                <div class="row">
+                    <div class="col-md-8 no-padding">
+                        <div class="quote_text relative-position">
+                            <img src="assets/img/background/qp.png" alt="">
+                            <div class="quote_title">
+                                <div class="section-title-area section-left-title">
+                                    <div class="section-title headline relative-position">
+                                        <div class="title-head  pera-content">
+                                            <h3>Estimez votre projet ici.</h3>
+                                            <p>Nous vous répondons au plus vite.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /qoute text -->
+                    <div class="col-md-4 no-padding">
+                        <div class="quote_mail relative-position">
+                            <div class="background-overlay"></div>
+                            <div class="quote_mail_add text-center headline pera-content">
+                                <i class="far fa-envelope"></i>
+                                <h3>Adresse Email</h3>
+                                <p>contact@audimaf.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        #presentation_text{text-align: justify}
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!-- Start of breadcrumb section
+		============================================= -->
+    <section id="breadcrumb" class="breadcrumb_section background-style relative-position">
+        <div class="background-overlay"></div>
+        <div class="container">
+            <div class="breadcrumb_list headline ul-li">
+                <h2 class="breadcrumb_title">Présentation</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path("homepage") }}">Accueil</a></li>
+                    <li class="breadcrumb-item active">Présentation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End of breadcrumb section
+        ============================================= -->
+
+    <!-- Start of MIssion content
+        ============================================= -->
+    <section id="mission" class="mission_section">
+        <div class="container">
+            <div class="mission_content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mission_img">
+                            <img src="assets/img/mission/mi1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="mission_text">
+                            <article class="presentation_text">
+                                AUDIMAF : Audit ou conseils en gestion comptabilité management et finances est un cabinet d'expertise comptable et de commissariat aux comptes inscrit au tableau de l'ordre des experts comptables de côte d'Ivoire. Les métier classiques que sont la comptabilité et le commissariat aux comptes sont exercés de même que le conseil sous toutes ces formes.
+                            </article>
+                            <article class="presentation_text">
+                                Pour nous toutes les entreprises sont appelées à faire preuve de compétitivité,  de dynamisme et de créativité.
+                                AUDIMAF vous aidera à produire plus de Valeur ajoutée par ces conseils et son accompagnement dans le développement et pour la fiabilité de l'information comptable et financière.
+                            </article>
+                            <article class="presentation_text">
+                                L'audit et le commissariat aux comptes , le conseil en organisation,  gestion et stratégie,  l'accompagnement dans le cadre de la mobilisation de ressources financières,  le montage du business plan, l'implémentation de systèmes etvsolutions informatiques de gestion, l'optimisation fiscale (agrément au code d'investissement,  remboursement de TVA, conseils au contrôle et contentieux fiscal,  etc.) Sont des activités courantes du cabinet
+                                Notre cabinet intervient dans tous les secteurs d'activités artisanat,  commerce,  services, industries, professions libérales, associations,  coopérative,  secteur agricole,  etc. Et ce quelque soit la taille ( très petites entreprises,  petites et moyennes entreprises,  grandes entreprises )
+                                Nous vous proposons un accompagnement spécifique à votre activité,  à la taille de votre organisation  en répondant à vos problématiques avec réactivité et dans le respect des valeurs communes
+
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mission_img">
+                            <img src="assets/img/mission/mi2.jpg" alt="">
+                        </div>
+                        <div class="section-title-area section-left-title">
+                            <div class="section-title headline relative-position">
+                                <div class="title-head pera-content">
+                                    <h2>Qui sommes
+                                        Nous ?</h2>
+                                    <p>Notre Mission</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of of MIssion content
+        ============================================= -->
+{% endblock %}

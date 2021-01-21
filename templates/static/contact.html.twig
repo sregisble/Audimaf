@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .service-list{cursor: pointer;}
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!-- Start of breadcrumb section
+		============================================= -->
+    <section id="breadcrumb" class="breadcrumb_section background-style relative-position">
+        <div class="background-overlay"></div>
+        <div class="container">
+            <div class="breadcrumb_list headline ul-li">
+                <h2 class="breadcrumb_title">Contact</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><router-link to="/home"><a href="#">Accueil</a></router-link></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End of breadcrumb section
+        ============================================= -->
+
+    <!-- Start of contact area
+        ============================================= -->
+    <section id="contact_area" class="contact_section">
+        <div class="container">
+            <div class="get-touch-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="get-touch-icon-text text-center">
+                            <div class="get-touch-icon">
+                                <span class="flaticon-email"></span>
+                            </div>
+                            <div class="get-touch-text headline">
+                                <h3>Email</h3>
+                                <span>contact@audimaf.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="get-touch-icon-text text-center">
+                            <div class="get-touch-icon">
+                                <span class="flaticon-call"></span>
+                            </div>
+                            <div class="get-touch-text headline">
+                                <h3>Téléphone</h3>
+                                <span>+225 05 05 50 03 54</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="get-touch-icon-text text-center">
+                            <div class="get-touch-icon">
+                                <span class="flaticon-location"></span>
+                            </div>
+                            <div class="get-touch-text headline">
+                                <h3>Addresse</h3>
+                                <span>Abidjan, Angré, Non-loin du Marché de Cocovico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact_map">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1UIykzOjglPM9ChoYlGJ_vGeii9l_0dwC" width="640" height="480"></iframe>
+        </div>
+        <div class="contact_page_form">
+            <div class="get-quote-section">
+                <div class="container">
+                    <div class="section-title-area">
+                        <div class="section-title headline relative-position text-center">
+                            <h2 class="title-bg relative-position text-uppercase">contact</h2>
+                            <div class="title-head pera-content">
+                                <h2>Nous écrire</h2>
+                                <p>Nous vous répondons au plus vite.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /section title -->
+                    <div class="quote_content">
+                        <div class="quote_form">
+                            <div id="contact_form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="contact-info">
+                                            <label>Votre nom</label>
+                                            <input class="name" v-model="name" type="text" placeholder="Entrez votre nom.....">
+                                            <div class="icon-bg">
+                                                <i class="far fa-user"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="contact-info">
+                                            <label>Votre adresse email</label>
+                                            <input class="name" v-model="email" type="email" placeholder="Entrez votre email......">
+                                            <div class="icon-bg">
+                                                <i class="far fa-envelope"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-info">
+                                    <label>Votre message</label>
+                                    <textarea id="message" v-model="message" placeholder="Veuillez entrer votre message......"></textarea>
+                                    <div class="icon-bg">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                </div>
+                                <div class="sub-button text-center text-capitalize">
+                                    <button class="hover-btn" type="submit" value="Submit" @click="writeMessage()">Envoyez votre message</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /qoute form -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of contact area
+        ============================================= -->
+{% endblock %}
