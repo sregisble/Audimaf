@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            table, tr, td{
+                border: solid 1px black;
+            }
+            .first{
+                font: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="first">Emetteur</td>
+                <td colspan="3">{{ senderName }}</td>
+            </tr>
+            <tr>
+                <td class="first">Mail Emetteur</td>
+                <td colspan="3">{{ senderEmail }}</td>
+            </tr>
+            <tr>
+                <td class="first">Message</td>
+                <td colspan="3">{{ message }}</td>
+            </tr>
+        </table>
+    </body>
+</html>
