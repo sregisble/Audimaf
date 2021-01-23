@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services{% endblock %}
+
+{% block body %}
+    <!-- Start of breadcrumb section
+		============================================= -->
+    <section id="breadcrumb" class="breadcrumb_section background-style relative-position">
+        <div class="background-overlay"></div>
+        <div class="container">
+            <div class="breadcrumb_list headline ul-li">
+                <h2 class="breadcrumb_title">Services</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path("homepage") }}">Accueil</a></li>
+                    <li class="breadcrumb-item active">Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End of breadcrumb section
+        ============================================= -->
+
+    <!-- Start of MIssion content
+        ============================================= -->
+    <section id="service" class="service-section service_page_content">
+			<div class="container">
+				<div class="row">
+
+                    {% for service in services %}
+                        <div class="col-md-3">
+                            <div class="service-icon-text relative-position text-center">
+                                <div class="service-icon">
+                                    <span class="{{ service.icon}}"></span>
+                                </div>
+                                <div class="service-text headline pera-content">
+                                    <h3>{{ service.name}}</h3>
+                                    <p>{{ service.resume|u.truncate(120, '...') }}</p>
+                                    <div class="btn-more">
+                                        <a href="{{path("services_details",{'slug':service.slug})}}">En savoir plus</a>
+                                    </div>
+                                </div>
+                                <div class="background-icon position-absolute">
+                                    <span class="flaticon-collaboration"></span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+					
+
+				</div>
+			</div>
+		</section>    <!-- End of of MIssion content
+        ============================================= -->
+{% endblock %}

@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7c09eea-59ec-437e-854e-b4cd6ef59983" name="Default Changelist" comment="Contact page finished, seems that there is a firewall blocking mails sended from code.">
-      <change afterPath="$PROJECT_DIR$/templates/emails/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/audimaf-v1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/audimaf-v1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="d7c09eea-59ec-437e-854e-b4cd6ef59983" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StaticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StaticController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/presentation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/presentation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,8 +125,6 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1nNZSCRzTWi5UdQWMj04l17WuFk" />
@@ -163,41 +151,18 @@
       <updated>1611232508163</updated>
       <workItem from="1611232509199" duration="10576000" />
       <workItem from="1611262974321" duration="2302000" />
-      <workItem from="1611315956489" duration="1106000" />
-      <workItem from="1611317435965" duration="2455000" />
-      <workItem from="1611327371970" duration="5224000" />
-      <workItem from="1611334939735" duration="498000" />
+      <workItem from="1611315956489" duration="724000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Contact page finished, seems that there is a firewall blocking mails sended from code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact page finished, seems that there is a firewall blocking mails sended from code." />
-  </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611265888333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611265888333" />
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1611323493829">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611323493829" />
     <state x="697" y="271" key="#com.intellij.tools.ToolEditorDialog" timestamp="1611232564427">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -206,22 +171,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611232561290" />
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1611316747102">
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1611315962390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611316747102" />
-    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1611316747102">
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611315962390" />
+    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1611315962390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611316747102" />
-    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1611316747102">
+    <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611315962390" />
+    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1611315962389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611316747102" />
-    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1611316747102">
+    <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611315962389" />
+    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1611315962390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611316747102" />
+    <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611315962390" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1611265952827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -234,5 +199,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1611235135605" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/static/contact.html.twig</url>
+          <line>70</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

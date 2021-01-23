@@ -42,7 +42,7 @@ class Page
     private $category;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $resume;
 
@@ -51,9 +51,15 @@ class Page
      */
     private $icon;
 
+    /**
+     * @ORM\OneToMany(targetEntity=SubService::class, mappedBy="page")
+     */
+    private $subServices;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
+        $this->subServices = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -87,7 +93,7 @@ class Page
         //Appel de slugify
         $slugify = new Slugify();
         //Création du slug
-        $this->slug = $slugify->slugify( $this->getName() );
+        $this->slug = $slugify->slugify($this->getName());
         //Destruction du slugify
         unset($slugify);
         return $this;
@@ -149,6 +155,36 @@ class Page
     public function setIcon(string $icon): self
     {
         $this->icon = $icon;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|SubService[]
+     */
+    public function getSubServices(): Collection
+    {
+        return $this->subServices;
+    }
+
+    public function addSubService(SubService $subService): self
+    {
+        if (!$this->subServices->contains($subService)) {
+            $this->subServices[] = $subService;
+            $subService->setPage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSubService(SubService $subService): self
+    {
+        if ($this->subServices->removeElement($subService)) {
+            // set the owning side to null (unless already changed)
+            if ($subService->getPage() === $this) {
+                $subService->setPage(null);
+            }
+        }
 
         return $this;
     }

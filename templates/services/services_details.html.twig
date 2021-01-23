@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services{% endblock %}
+
+{% block body %}
+    <!-- Start of breadcrumb section
+		============================================= -->
+    <section id="breadcrumb" class="breadcrumb_section background-style relative-position">
+        <div class="background-overlay"></div>
+        <div class="container">
+            <div class="breadcrumb_list headline ul-li">
+                <h2 class="breadcrumb_title">{{service.name}}</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path("homepage") }}">Accueil</a></li>
+                    <li class="breadcrumb-item active">Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End of breadcrumb section
+        ============================================= -->
+
+    <!-- Start of MIssion content
+        ============================================= -->
+    <section id="service_details" class="service_details_section">
+			<div class="container">
+				<div class="service_details_content">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="service_details_left headline">
+								<img src="{{ asset('assets/img/service/sds1.jpg')}}" alt="">
+								<span class="theme-tag text-uppercase">{{service.name}}</span>
+								<h2>Nous encadrons les entreprises en {{service.name}}.</h2>
+								<article>
+                                {{service.resume}}
+								</article>
+								<section id="blog_details" class="blog_news_post_section blog_details_area">
+			
+								<div class="blog_details_content headline">
+									<div class="blog_details_text headline">
+										<h4>Ce que nous faisons précisement en {{service.name}} </h4>
+										<div class="blog_details_list ul-li-block">
+											<ul>
+											{% for sub in service.subServices %}
+												<li> {{ sub.name }}</li>
+											{% endfor %}
+												
+											</ul>
+										</div>
+									</div>
+								</div>
+								{# <blockquote>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation with ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									<div class="author_intro ul-li  clearfix">
+										<div class="ath_img float-left">
+											<img src="assets/img/feature/fa.jpg" alt="">
+										</div>
+										<ul class="ath_add">
+											<li class="ath_name">Marilin De Aragon</li>
+										</ul>
+										<div class="icon_bg">
+											<i class="far fa-comments"></i>
+										</div>
+									</div>
+								</blockquote>
+								<article>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
+									architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+								</article>
+								<div class="service_chart">
+									<div class="chart-container">
+										<canvas id="nio_chart_2" width="750" height="350"></canvas>
+									</div>
+								</div>
+								<div class="service_bottomimg">
+									<div class="row">
+										<div class="col-md-6">
+											<img src="assets/img/service/sds2.jpg" alt="">
+										</div>
+										<div class="col-md-6">
+											<img src="assets/img/service/sds3.jpg" alt="">
+										</div>
+									</div>
+								</div>#}
+							</div>
+						</div>
+						<!-- /single left content -->
+						<div class="col-md-4">
+							<div class="single-sidebar">
+								<div class="single_widget">
+									<div class="service_itemlist ul-li-block">
+										<ul>
+                                        {% for service in services %}
+                                            <li><a href="{{path("services_details",{'slug':service.slug})}}">{{ service.name }}</a></li>
+                                        {% endfor %}
+											
+											
+										</ul>
+									</div>
+								</div>
+								{#<div class="single_widget">
+									<div class="cotanct_formarea text-center">
+										<span class="form_title">Contact Form</span>
+										<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+											<div class="form_field">
+												<div class="contact-info">
+													<input class="email" name="name" type="text" placeholder="Enter Your Name">
+													<div class="icon-bg">
+														<i class="far fa-user"></i>
+													</div>
+												</div>
+												<div class="contact-info">
+													<input class="name" name="Email" type="email" placeholder="Enter Your Mail">
+													<div class="icon-bg">
+														<i class="far fa-envelope"></i>
+													</div>
+												</div>
+												<div class="contact-info">
+													<input class="name" name="phone" type="text" placeholder="Enter Your Phone">
+													<div class="icon-bg">
+														<i class="fas fa-phone"></i>
+													</div>
+												</div>
+												<div class="contact-info">
+													<textarea id="message" name="message" placeholder="Enter Your Idea"></textarea>
+													<div class="icon-bg">
+														<i class="far fa-edit"></i>
+													</div>
+												</div>
+											</div>
+											<div class="sub-button text-center text-capitalize">
+												<button class="hover-btn" type="submit" value="Submit">Submit Now</button> 
+											</div> 
+										</form>
+									</div>
+								</div>#}
+								<div class="single_widget">
+									<div class="service_w_img">
+										<img src="{{ asset('assets/img/service/sds4.jpg')}}" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- End of of MIssion content
+        ============================================= -->
+{% endblock %}

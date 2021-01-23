@@ -3,6 +3,9 @@
 {% block title %}Contact{% endblock %}
 
 {% block stylesheets %}
+    <style>
+        .service-list{cursor: pointer;}
+    </style>
 {% endblock %}
 
 {% block body %}
@@ -14,7 +17,7 @@
             <div class="breadcrumb_list headline ul-li">
                 <h2 class="breadcrumb_title">Contact</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                    <li class="breadcrumb-item"><router-link to="/home"><a href="#">Accueil</a></router-link></li>
                     <li class="breadcrumb-item active">Contact</li>
                 </ul>
             </div>
@@ -28,15 +31,6 @@
     <section id="contact_area" class="contact_section">
         <div class="container">
             <div class="get-touch-content">
-                <div class="row">
-                    {% for label, messages in app.flashes %}
-                        {% for message in messages %}
-                            <div class="alert alert-{{ label }}" role="alert">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    {% endfor %}
-                </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="get-touch-icon-text text-center">
@@ -67,7 +61,7 @@
                             </div>
                             <div class="get-touch-text headline">
                                 <h3>Addresse</h3>
-                                <span>Abidjan, Angré, Non-loin du Marché de Cocovico</span>
+                                <span>Cocody Angré,au 3<sup>ème</sup>étage de l'immeuble en face de la mosquée du marché cocovico</span>
                             </div>
                         </div>
                     </div>
@@ -92,12 +86,12 @@
                     <!-- /section title -->
                     <div class="quote_content">
                         <div class="quote_form">
-                            <form id="contact_form" action="{{ path("mail_contact") }}" method="POST">
+                            <div id="contact_form">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="contact-info">
                                             <label>Votre nom</label>
-                                            <input class="name" type="text" name="name" placeholder="Entrez votre nom.....">
+                                            <input class="name" v-model="name" type="text" placeholder="Entrez votre nom.....">
                                             <div class="icon-bg">
                                                 <i class="far fa-user"></i>
                                             </div>
@@ -106,7 +100,7 @@
                                     <div class="col-md-6">
                                         <div class="contact-info">
                                             <label>Votre adresse email</label>
-                                            <input class="name" type="email" name="email" placeholder="Entrez votre email......">
+                                            <input class="name" v-model="email" type="email" placeholder="Entrez votre email......">
                                             <div class="icon-bg">
                                                 <i class="far fa-envelope"></i>
                                             </div>
@@ -115,15 +109,16 @@
                                 </div>
                                 <div class="contact-info">
                                     <label>Votre message</label>
-                                    <textarea id="message" name="message" placeholder="Veuillez entrer votre message......"></textarea>
+                                    <textarea id="message" v-model="message" placeholder="Veuillez entrer votre message......"></textarea>
                                     <div class="icon-bg">
                                         <i class="far fa-edit"></i>
                                     </div>
                                 </div>
                                 <div class="sub-button text-center text-capitalize">
-                                    <button class="hover-btn" type="submit" value="Submit">Envoyez votre message</button>
+                                    <button class="hover-btn" type="submit" value="Submit" @click="writeMessage()">Envoyez votre message</button>
                                 </div>
-                            </form>
+
+                            </div>
                         </div>
                     </div>
                     <!-- /qoute form -->
